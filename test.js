@@ -1,21 +1,55 @@
+// Daniel Shiffman
+// http://codingtra.in
+// http://patreon.com/codingtrain
+// Code for: https://youtu.be/IKB1hWWedMk
 
-// A HTML range slider
-let slider;
+// Edited by SacrificeProductions
+
+var cols, rows;
+var scl = 20;
+var w = 1400;
+var h = 1000;
+
+var flying = 0;
+
+var terrain = [];
 
 function setup() {
-  createCanvas(720, 400);
-  // hue, saturation, and brightness
-  colorMode(HSB, 255);
-  // slider has a range between 0 and 255 with a starting value of 127
-  slider = createSlider(0, 255, 127);
+  createCanvas(600, 600, WEBGL);
+  cols = w / scl;
+  rows = h / scl;
+
+  for (var x = 0; x < cols; x++) {
+    terrain[x] = [];
+    for (var y = 0; y < rows; y++) {
+      terrain[x][y] = 0; //specify a default value for now
+    }
+  }
 }
 
 function draw() {
-  background(127);
-  strokeWeight(2);
+  flying -= 0.1;
+  var yoff = flying;
+  for (var y = 0; y < rows; y++) {
+    var xoff = 0;
+    for (var x = 0; x < cols; x++) {
+      terrain[x][y] = map(noise(xoff, yoff), 0, 1, -100, 100);
+      xoff += 0.2;
+    }
+    yoff += 0.2;
+  }
 
-  // Set the hue according to the slider
-  stroke(slider.value(), 255, 255);
-  fill(slider.value(), 255, 255, 127);
-  ellipse(360, 200, 200, 200);
+  background(0);
+  translate(0, 50);
+  rotateX(PI / 3);
+  fill(200, 200, 200, 50);
+  translate(-w / 2, -h / 2);
+  for (var y = 0; y < rows - 1; y++) {
+    beginShape(TRIANGLE_STRIP);
+    for (var x = 0; x < cols; x++) {
+      vertex(x * scl, y * scl, terrain[x][y]);
+      vertex(x * scl, (y + 1) * scl, terrain[x][y + 1]);
+    }
+    endShape();
+  }
 }
