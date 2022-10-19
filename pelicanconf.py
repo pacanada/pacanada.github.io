@@ -4,6 +4,7 @@ SITEURL = ''
 
 PATH = 'content'
 OUTPUT_PATH = 'docs'
+THEME = "/Users/pablocanadapereira/Desktop/Projects/attila-custom"
 
 TIMEZONE = 'Europe/Rome'
 
