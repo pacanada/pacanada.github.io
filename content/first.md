@@ -11,7 +11,7 @@ to `wasm32` target and `wasm-bindgen` crate, everybody can "play" interactively 
 
 **_NOTE:_** Collisions are not implemented.
 
-**It will take a few seconds to load**
+**It will take a few seconds to load at the bottom of the page**
 <script type="module">
     import init from './gravity_simulation/rust-graphics.js'
     init()

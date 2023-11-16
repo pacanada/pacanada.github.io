@@ -1,5 +1,5 @@
 AUTHOR = 'Pablo Canada Pereira'
-SITENAME = 'Testing Pelican'
+SITENAME = 'Whatever catch my attention for more than 1 day'
 SITEURL = ''
 
 PATH = 'content'
@@ -30,4 +30,4 @@ SOCIAL = (('You can add links in your config file', '#'),
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
