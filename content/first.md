@@ -7,7 +7,7 @@ a while now and seemed like a good idea to showcase some small experiments in he
 to `wasm32` target and `wasm-bindgen` crate, everybody can "play" interactively with some planets and gravity directly in the browser.
 
 1. Modify the velocity, mass or position of the planets to generate orbital movements. The dotted trajectory will help you visualize where the bodies will move.
-2. Click on `Run simulation` to start. `Reset` will start the simulation with default values and `Spawn new` will spawn an extra planet.
+2. Click on `Run simulation` to start. `Reset` will restart the simulation with default values and `Spawn new` will spawn an extra planet.
 
 **_NOTE:_** Collisions are not implemented.
 
