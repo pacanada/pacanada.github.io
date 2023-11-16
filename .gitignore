@@ -1,5 +1,5 @@
 *.png
 .venv/
-__pycache__/*
+__pycache__/pelicanconf.cpython-38.pyc
+__pycache__/*.pyc
 .DS_Store/
-*.pyc
