@@ -7,14 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>First review</title>
+  <title>Gravity simulation with Bevy and WASM</title>
 
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="origin" />
   <meta name="generator" content="Pelican" />
-<link href="/first-review.html" rel="canonical" />
+<link href="/gravity-simulation-with-bevy-and-wasm.html" rel="canonical" />
   <!-- Feed -->
 
   <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
@@ -36,14 +36,9 @@
 
 
 
-    <meta name="description" content="Following is a review of my favorite mechanical keyboard.">
+    <meta name="description" content="I have been playing around with the Bevy game engine (written in Rust) for a while now and seemed like a good idea to showcase some...">
 
     <meta name="author" content="Pablo Canada Pereira">
-
-    <script type="module">
-      import init from './gravity_simulation/rust-graphics.js'
-      init()
-    </script>
 
 
 
@@ -51,15 +46,15 @@
 
 <!-- Open Graph -->
 <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="Testing Pelican"/>
-<meta prefix="og: http://ogp.me/ns#" property="og:title" content="First review"/>
-<meta prefix="og: http://ogp.me/ns#" property="og:description" content="Following is a review of my favorite mechanical keyboard."/>
+<meta prefix="og: http://ogp.me/ns#" property="og:title" content="Gravity simulation with Bevy and WASM"/>
+<meta prefix="og: http://ogp.me/ns#" property="og:description" content="I have been playing around with the Bevy game engine (written in Rust) for a while now and seemed like a good idea to showcase some..."/>
 <meta prefix="og: http://ogp.me/ns#" property="og:locale" content="en_US"/>
-<meta prefix="og: http://ogp.me/ns#" property="og:url" content="/first-review.html"/>
+<meta prefix="og: http://ogp.me/ns#" property="og:url" content="/gravity-simulation-with-bevy-and-wasm.html"/>
 <meta prefix="og: http://ogp.me/ns#" property="og:type" content="article"/>
-<meta prefix="og: http://ogp.me/ns#" property="article:published_time" content="2010-12-03 10:20:00+01:00"/>
+<meta prefix="og: http://ogp.me/ns#" property="article:published_time" content="2023-11-16 10:20:00+01:00"/>
 <meta prefix="og: http://ogp.me/ns#" property="article:modified_time" content=""/>
 <meta prefix="og: http://ogp.me/ns#" property="article:author" content="/author/pablo-canada-pereira.html">
-<meta prefix="og: http://ogp.me/ns#" property="article:section" content="Review"/>
+<meta prefix="og: http://ogp.me/ns#" property="article:section" content="Sandbox"/>
 <meta prefix="og: http://ogp.me/ns#" property="og:image" content="/theme/images/home-bg.jpg">
 
 <!-- Twitter Card -->
@@ -68,9 +63,9 @@
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "First review",
-  "headline": "First review",
-  "datePublished": "2010-12-03 10:20:00+01:00",
+  "name": "Gravity simulation with Bevy and WASM",
+  "headline": "Gravity simulation with Bevy and WASM",
+  "datePublished": "2023-11-16 10:20:00+01:00",
   "dateModified": "",
   "author": {
     "@type": "Person",
@@ -78,8 +73,8 @@
     "url": "/author/pablo-canada-pereira.html"
   },
   "image": "/theme/images/post-bg.jpg",
-  "url": "/first-review.html",
-  "description": "Following is a review of my favorite mechanical keyboard."
+  "url": "/gravity-simulation-with-bevy-and-wasm.html",
+  "description": "I have been playing around with the Bevy game engine (written in Rust) for a while now and seemed like a good idea to showcase some..."
 }
 </script>
 </head>
@@ -113,11 +108,11 @@
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">First review</h1>
+        <h1 class="post-title">Gravity simulation with Bevy and WASM</h1>
         <!-- TODO : Proper class for headline -->
         <span class="post-meta">
                 <a href="/author/pablo-canada-pereira.html">Pablo Canada Pereira</a>
-            | <time datetime="Fri 03 December 2010">Fri 03 December 2010</time>
+            | <time datetime="Thu 16 November 2023">Thu 16 November 2023</time>
         </span>
       </div>
     </header>
@@ -130,18 +125,30 @@
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <p>Following is a review of my favorite mechanical keyboard.</p>
+                <p>I have been playing around with the <a href="https://bevyengine.org/">Bevy</a> game engine (written in Rust) for
+a while now and seemed like a good idea to showcase some small experiments in here. Making use of the Rust compilation
+to <code>wasm32</code> target and <code>wasm-bindgen</code> crate, everybody can "play" interactively with some planets and gravity directly in the browser.</p>
+<ol>
+<li>Modify the velocity, mass or position of the planets to generate orbital movements. The dotted trajectory will help you visualize where the bodies will move.</li>
+<li>Click on <code>Run simulation</code> to start. <code>Reset</code> will start the simulation with default values and <code>Spawn new</code> will spawn an extra planet.</li>
+</ol>
+<p><strong><em>NOTE:</em></strong> Collisions are not implemented.</p>
+<p><strong>It will take a few seconds to load</strong></p>
+<script type="module">
+    import init from './gravity_simulation/rust-graphics.js'
+    init()
+</script>
             </section>
 
             <section class="post-info">
                 <div class="post-share">
-                    <a class="twitter" href="https://twitter.com/share?text=First review&amp;url=/first-review.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a class="twitter" href="https://twitter.com/share?text=Gravity simulation with Bevy and WASM&amp;url=/gravity-simulation-with-bevy-and-wasm.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
                     </a>
-                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/first-review.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/gravity-simulation-with-bevy-and-wasm.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
                     </a>
-                    <a class="googleplus" href="https://plus.google.com/share?url=/first-review.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <a class="googleplus" href="https://plus.google.com/share?url=/gravity-simulation-with-bevy-and-wasm.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
                     </a>
                     <div class="clear"></div>
